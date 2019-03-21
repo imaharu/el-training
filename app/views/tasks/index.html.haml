@@ -1,4 +1,8 @@
 %h1 Tasks#index
+%p
+  = link_to '新規作成', new_task_path
 - @tasks.each do |task|
   %p
     = task.name
+    = link_to '編集', edit_task_path(task)
+    = link_to '削除', task, method: :delete, confirm: "タスク「#{task.name}」を削除しますか？"
