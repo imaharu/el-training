@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20190316130251) do
 
   create_table "tasks", force: :cascade do |t|
     t.string "name"
-    t.string "context"
+    t.string "content"
     t.datetime "closed_on"
     t.integer "status", default: 1
     t.integer "priority", default: 0
